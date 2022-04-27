@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { StarWars, StarWarsDetails } from './pages/starWars';
 
 const AppRoutes = () => {
+    console.log("Routes")
     return (
         <Routes>
             <Route
