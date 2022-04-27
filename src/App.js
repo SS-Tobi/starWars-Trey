@@ -1,10 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { StoreProvider } from './contexts';
+import AppRoutes from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      dd
-    </div>
+    <StoreProvider>
+      <div className="App">
+        <Router>
+          <AppRoutes />
+        </Router>
+      </div>
+    </StoreProvider>
   );
 }
 
