@@ -4,7 +4,7 @@ import { useStore } from "../contexts";
 import * as CONSTANTS from "../contexts/constants/starWars";
 
 export const useGetPeopleList = () => {
-  const [ isLoading, setIsLoading ] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { dispatch } = useStore();
 
   const getPeopleList = useCallback(async () => {
@@ -24,7 +24,5 @@ export const useGetPeopleList = () => {
     dispatch({ type: CONSTANTS.SET_LOADING, isLoading });
   }, [isLoading]);
 
-  return {
-    getPeopleList,
-  };
+  return { getPeopleList };
 };
